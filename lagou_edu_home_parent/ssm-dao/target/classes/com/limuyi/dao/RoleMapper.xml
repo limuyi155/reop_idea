@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.limuyi.dao.RoleMapper">
+    <!--查询所有角色(条件)-->
+    <select id="findAllRole" parameterType="Role" resultType="Role">
+        select * from roles
+        <where>
+            <if test="name != null and name != ''">
+                and name = #{name}
+            </if>
+        </where>
+    </select>
+
+    <!--根据角色ID查询角色关联的菜单信息ID{1，2，3，5}  public List<Integer> findMenuByRoleId(Integer roleId);-->
+    <select id="findMenuByRoleId" parameterType="int" resultType="int">
+        SELECT
+	        m.id
+        FROM
+        	roles r
+        	INNER JOIN role_menu_relation rm ON r.id = rm.role_id
+        	INNER JOIN menu m ON m.id = rm.menu_id
+        WHERE
+	        r.id =#{roleId}
+    </select>
+
+
+    <!--根据roleid删除在中间表与菜单的关联关系-->
+    <delete id="deleteRoleContextMenu" parameterType="int">
+        delete from role_menu_relation where role_id=#{rid}
+    </delete>
+
+    <!--为角色分配菜单-->
+    <insert id="roleContextMenu" parameterType="Role_menu_relation">
+        insert into role_menu_relation values (null ,#{menuId},#{roleId},#{createdTime},#{updatedTime},#{createdBy},#{updatedby})
+    </insert>
+
+    <!--删除角色 public void deleteRole(Integer roleid);-->
+    <delete id="deleteRole" parameterType="int">
+        delete from roles where id=#{roleid}   /*删除之前清空中间表上面已经有了，调用就行*/
+    </delete>
+</mapper>

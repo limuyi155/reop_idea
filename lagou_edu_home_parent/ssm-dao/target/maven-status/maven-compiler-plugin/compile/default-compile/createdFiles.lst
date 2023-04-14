@@ -1,0 +1,8 @@
+com\limuyi\dao\PromotionAdMapper.class
+com\limuyi\dao\MenuMapper.class
+com\limuyi\dao\CourseContentMapper.class
+com\limuyi\dao\ResourceMapper.class
+com\limuyi\dao\ResourceCategoryMapper.class
+com\limuyi\dao\UserMapper.class
+com\limuyi\dao\RoleMapper.class
+com\limuyi\dao\PromotionSpaceMapper.class

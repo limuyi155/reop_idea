@@ -1,0 +1,14 @@
+com\limuyi\domain\PromotionAdVO.class
+com\limuyi\domain\PromotionSpace.class
+com\limuyi\domain\Role_menu_relation.class
+com\limuyi\domain\PromotionAd.class
+com\limuyi\domain\Role.class
+com\limuyi\domain\RoleMenuVo.class
+com\limuyi\domain\ResourceVO.class
+com\limuyi\domain\ResourceCategory.class
+com\limuyi\domain\UserVo.class
+com\limuyi\domain\User_Role_relation.class
+com\limuyi\domain\Resource.class
+com\limuyi\domain\User.class
+com\limuyi\domain\Menu.class
+com\limuyi\domain\Teacher.class

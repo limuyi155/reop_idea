@@ -1,0 +1,10 @@
+com\limuyi\controller\MenuController.class
+com\limuyi\controller\PromotionSpaceController.class
+com\limuyi\controller\RoleController.class
+com\limuyi\controller\TestController.class
+com\limuyi\controller\PromotionAdController.class
+com\limuyi\controller\CourseContentController.class
+com\limuyi\controller\ResourceCategoryController.class
+com\limuyi\controller\UserController.class
+com\limuyi\controller\CourseController.class
+com\limuyi\controller\ResourceController.class
